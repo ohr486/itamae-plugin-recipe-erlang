@@ -6,12 +6,12 @@ require "itamae/plugin/recipe/erlang/version"
 Gem::Specification.new do |spec|
   spec.name          = "itamae-plugin-recipe-erlang"
   spec.version       = Itamae::Plugin::Recipe::Erlang::VERSION
-  spec.authors       = ["ohara_tsunenori"]
-  spec.email         = ["tsunenori.ohara@drecom.co.jp"]
+  spec.authors       = ["ohr486"]
+  spec.email         = ["ohr486@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Itamae plugin to install erlang with kerl"
+  spec.description   = "Itamae plugin to install erlang with kerl"
+  spec.homepage      = "https://github.com/ohr486/itamae-plugin-recipe-erlang"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -29,6 +29,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_dependency "itamae", "~> 1.2"
 
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
