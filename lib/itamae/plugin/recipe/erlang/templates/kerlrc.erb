@@ -1,0 +1,14 @@
+# kerl config
+KERL_BASE_DIR=/usr/local/kerl
+KERL_CONFIG=/root/.kerlrc
+KERL_DOWNLOAD_DIR=${KERL_BASE_DIR}/archives
+KERL_BUILD_DIR=${KERL_BASE_DIR}/builds
+KERL_GIT_DIR=${KERL_BASE_DIR}/gits
+
+# build config
+KERL_CONFIGURE_OPTIONS="<%= @erlang_configure_options %>"
+KERL_CONFIGURE_APPLICATIONS="<%= @erlang_enable_apps %>"
+KERL_CONFIGURE_DISABLE_APPLICATIONS="<%= @erlang_disable_apps %>"
+
+# install config
+KERL_DEFAULT_INSTALL_DIR=${KERL_BASE_DIR}/erlang
