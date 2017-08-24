@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["ohr486"]
   spec.email         = ["ohr486@gmail.com"]
 
-  spec.summary       = "Itamae plugin to install erlang with kerl"
-  spec.description   = "Itamae plugin to install erlang with kerl"
+  spec.summary       = %q{Itamae plugin to install erlang with kerl}
+  spec.description   = %q{Itamae plugin to install erlang with kerl}
   spec.homepage      = "https://github.com/ohr486/itamae-plugin-recipe-erlang"
   spec.license       = "MIT"
 
