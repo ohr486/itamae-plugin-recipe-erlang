@@ -1,2 +1,2 @@
 include_recipe "erlang::dependency"
-include_recipe "erlang::kerl"
+include_recipe "erlang::setup"
