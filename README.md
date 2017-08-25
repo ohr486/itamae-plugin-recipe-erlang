@@ -1,7 +1,5 @@
 # Itamae::Plugin::Recipe::Erlang
 
-[![Build Status](https://travis-ci.org/ohr486/itamae-plugin-recipe-erlang.svg?branch=master)](https://travis-ci.org/ohr486/itamae-plugin-recipe-erlang)
-
 [![wercker status](https://app.wercker.com/status/d64235a018605ddf4ebee04532597235/m/master "wercker status")](https://app.wercker.com/project/byKey/d64235a018605ddf4ebee04532597235)
 
 Itamae plugin to install erlang with kerl
