@@ -6,9 +6,6 @@ default: &default
       name: remove all vms
       code: vagrant destroy -f
 
-build:
-  steps:
-
 build-centos7:
   <<: *default
   steps:
