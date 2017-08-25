@@ -4,7 +4,11 @@
   end
 end
 
-%w(wget).each do |pkg|
+%w(
+  wget perl gcc
+  ncurses-devel openssl-devel unixODBC-devel
+  java-1.8.0-openjdk-devel fop
+).each do |pkg|
   package pkg do
     action :install
   end

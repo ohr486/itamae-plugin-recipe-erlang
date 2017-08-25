@@ -1,0 +1,5 @@
+erlang:
+  version: 20.0
+  configure_options: ""
+  enable_apps: ""
+  disable_apps: ""

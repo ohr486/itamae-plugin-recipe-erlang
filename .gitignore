@@ -51,3 +51,10 @@ Gemfile.lock
 
 # rspec failure tracking
 .rspec_status
+
+# for vagrant
+.vagrant
+
+# for editor
+*.swp
+*~

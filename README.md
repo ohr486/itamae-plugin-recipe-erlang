@@ -46,6 +46,15 @@ erlang:
   disable_apps: ""
 ```
 
+## Testing
+
+requirements [Vagrant](https://www.vagrantup.com/)
+
+```sh
+bundle exec rake itamae:default
+bundle exec rake spec:default
+```
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
