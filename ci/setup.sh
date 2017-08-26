@@ -7,8 +7,8 @@ wget https://releases.hashicorp.com/vagrant/1.9.8/vagrant_1.9.8_x86_64.rpm
 rpm -i vagrant_1.9.8_x86_64.rpm
 vagrant plugin install vagrant-digitalocean
 
-#gem uninstall bundler --all --force
-#gem install bundler --no-document
+gem uninstall bundler --all --force
+gem install bundler --no-document
 
 # put ssh keys
 echo "# put ssh key"
