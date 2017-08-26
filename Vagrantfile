@@ -27,10 +27,14 @@ Vagrant.configure("2") do |config|
       c.vm.hostname = "itamae-erlang-centos7"
       c.vm.hostname += "-#{ENV["WERCKER_RUN_ID"]}" if ENV["WERCKER_RUN_ID"]
     end
+    c.vm.hostname = "centos7"
+    c.vm.hostname += "-#{ENV["WERCKER_RUN_ID"]}" if ENV["WERCKER_RUN_ID"]
   end
 
   config.vm.define "aws" do |a|
     a.vm.box = "mvbcoding/awslinux"
+    c.vm.hostname = "aws"
+    c.vm.hostname += "-#{ENV["WERCKER_RUN_ID"]}" if ENV["WERCKER_RUN_ID"]
   end
 
   config.vm.provider "virtualbox" do |vb|
