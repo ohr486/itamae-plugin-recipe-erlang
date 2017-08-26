@@ -1,5 +1,7 @@
 #!/bin/bash -xe
 
+echo "### ci/build.sh ###"
+
 readonly HOST=$1
 
 vagrant up $HOST --provider=digital_ocean

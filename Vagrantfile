@@ -20,6 +20,11 @@ Vagrant.configure("2") do |config|
     override.nfs.functional = false
   end
 
+  config.vm.provider "virtualbox" do |vb|
+    vb.gui = false
+    vb.memory = "512"
+  end
+
   config.vm.define "centos7" do |c|
     c.vm.box = "centos/7"
     c.vm.provider :digital_ocean do |provider, override|
@@ -33,12 +38,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "aws" do |a|
     a.vm.box = "mvbcoding/awslinux"
-    c.vm.hostname = "aws"
-    c.vm.hostname += "-#{ENV["WERCKER_RUN_ID"]}" if ENV["WERCKER_RUN_ID"]
-  end
-
-  config.vm.provider "virtualbox" do |vb|
-    vb.gui = false
-    vb.memory = "512"
+    a.vm.hostname = "aws"
+    a.vm.hostname += "-#{ENV["WERCKER_RUN_ID"]}" if ENV["WERCKER_RUN_ID"]
   end
 end
