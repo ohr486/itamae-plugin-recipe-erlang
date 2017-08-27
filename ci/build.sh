@@ -12,5 +12,5 @@ echo `ls -alh`
 echo `vagrant ssh-config`
 echo `vagrant status`
 
-#bundle exec rake itamae:$HOST -v
-#bundle exec rake spec:$HOST -v
+bundle exec rake itamae:$HOST
+bundle exec rake spec:$HOST
