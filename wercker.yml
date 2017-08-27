@@ -1,5 +1,5 @@
 box: drecom/centos-ruby:2.3.1
-command-timeout: 60
+no-response-timeout: 60
 
 default: &default
   after-steps:
