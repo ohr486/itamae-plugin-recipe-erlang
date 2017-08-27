@@ -1,4 +1,1 @@
-#include_recipe "erlang::install"
-
-# for debug
-include_recipe "erlang::dependency"
+include_recipe "erlang::install"
