@@ -26,16 +26,17 @@ Vagrant.configure("2") do |config|
     c.vm.box = "centos/7"
     c.vm.provider :digital_ocean do |provider, override|
       provider.image = "centos-7-0-x64"
-      c.vm.hostname = "itamae-erlang-centos7"
-      c.vm.hostname += "-#{ENV["WERCKER_RUN_ID"]}" if ENV["WERCKER_RUN_ID"]
     end
     c.vm.hostname = "centos7"
     c.vm.hostname += "-#{ENV["WERCKER_RUN_ID"]}" if ENV["WERCKER_RUN_ID"]
   end
 
-  #config.vm.define "aws" do |a|
-  #  a.vm.box = "mvbcoding/awslinux"
-  #  a.vm.hostname = "aws"
-  #  a.vm.hostname += "-#{ENV["WERCKER_RUN_ID"]}" if ENV["WERCKER_RUN_ID"]
-  #end
+  config.vm.define "aws" do |a|
+    a.vm.box = "mvbcoding/awslinux"
+    a.vm.provider :digital_ocean do |provider, override|
+      provider.image = "centos-7-0-x64"
+    end
+    a.vm.hostname = "aws"
+    a.vm.hostname += "-#{ENV["WERCKER_RUN_ID"]}" if ENV["WERCKER_RUN_ID"]
+  end
 end
