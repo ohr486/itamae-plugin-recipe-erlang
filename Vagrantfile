@@ -3,6 +3,7 @@
 
 Vagrant.configure("2") do |config|
   config.vm.provider :digital_ocean do |provider, override|
+    override.ssh.private_key_path = "~/.ssh/id_rsa"
     override.vm.box = "digital_ocean"
     override.vm.box_url = "https://github.com/smdahlen/vagrant-digitalocean/raw/master/box/digital_ocean.box"
     provider.token = ENV["DIGITALOCEAN_ACCESS_TOKEN"]
@@ -11,11 +12,8 @@ Vagrant.configure("2") do |config|
 
     if ENV["WERCKER"] == "true"
       provider.ssh_key_name = "wercker-vagrant"
-      override.ssh.private_key_path = "~/.ssh/id_rsa.vagrant"
-      override.vm.synced_folder ".", "/vagrant", disabled: true
     else
       provider.ssh_key_name = "local"
-      override.ssh.private_key_path = "~/.ssh/id_rsa"
     end
   end
 
