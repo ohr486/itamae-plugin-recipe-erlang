@@ -1,5 +1,6 @@
 # Itamae::Plugin::Recipe::Erlang
 
+[![Gem Version](https://badge.fury.io/rb/itamae-plugin-recipe-erlang.svg)](https://badge.fury.io/rb/itamae-plugin-recipe-erlang)
 [![wercker status](https://app.wercker.com/status/d64235a018605ddf4ebee04532597235/m/master "wercker status")](https://app.wercker.com/project/byKey/d64235a018605ddf4ebee04532597235)
 
 Itamae plugin to install erlang with kerl
