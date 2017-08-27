@@ -44,6 +44,7 @@ end
 
 execute "kerl update releases"
 
+=begin
 execute "kerl build #{erlang_version} #{erlang_version}" do
   not_if "test -e /usr/local/kerl/builds/#{erlang_version}"
 end
@@ -52,3 +53,4 @@ execute "# activate erlang" do
   not_if "test -e /usr/local/kerl/erlang/#{erlang_version}"
   command "kerl install #{erlang_version} /usr/local/kerl/erlang/#{erlang_version}"
 end
+=end
