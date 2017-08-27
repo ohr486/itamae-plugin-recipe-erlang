@@ -10,14 +10,13 @@ Vagrant.configure("2") do |config|
     provider.size = "512MB"
 
     if ENV["WERCKER"] == "true"
-      provider.ssh_key_name = "wercker-#{ENV['WERCKER_GIT_REPOSITORY']}"
+      provider.ssh_key_name = "wercker-vagrant"
       override.ssh.private_key_path = "~/.ssh/id_rsa.vagrant"
       override.vm.synced_folder ".", "/vagrant", disabled: true
     else
       provider.ssh_key_name = "local"
       override.ssh.private_key_path = "~/.ssh/id_rsa"
     end
-    override.nfs.functional = false
   end
 
   config.vm.provider "virtualbox" do |vb|
