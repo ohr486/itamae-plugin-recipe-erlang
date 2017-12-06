@@ -38,7 +38,7 @@ Use this with `itamae -y node.yml`
 # node.yml
 erlang:
   # target version
-  version: 20.0
+  version: 20.1
   # build options, see: https://github.com/kerl/kerl#build-configuration
   configure_options: ""
   enable_apps: ""
