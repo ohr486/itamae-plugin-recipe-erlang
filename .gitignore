@@ -58,3 +58,6 @@ Gemfile.lock
 # for editor
 *.swp
 *~
+
+# for Ma
+.DS_Store
