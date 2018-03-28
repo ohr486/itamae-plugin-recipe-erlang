@@ -55,6 +55,9 @@ Gemfile.lock
 # for vagrant
 .vagrant
 
+# for ide
+.idea
+
 # for editor
 *.swp
 *~
