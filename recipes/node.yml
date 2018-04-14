@@ -1,5 +1,5 @@
 erlang:
-  version: "20.3.2"
+  version: 20.2
   configure_options: ""
   enable_apps: ""
   disable_apps: ""
