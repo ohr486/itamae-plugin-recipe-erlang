@@ -35,9 +35,9 @@ end
 
 execute "KERL_BUILD_BACKEND=git kerl update releases"
 
-execute "KERL_BUILD_BACKEND=git kerl build #{erlang_version} #{erlang_version}" do
-  not_if "test -e /usr/local/kerl/builds/#{erlang_version}"
-end
+execute "KERL_BUILD_BACKEND=git kerl build #{erlang_version} #{erlang_version}" #do
+#  not_if "test -e /usr/local/kerl/builds/#{erlang_version}"
+#end
 
 execute "# activate erlang" do
   not_if "test -e /usr/local/kerl/erlang/#{erlang_version}"
