@@ -4,6 +4,7 @@ erlang_version = node[:erlang][:version]
 erlang_configure_options = node[:erlang][:configure_options]
 erlang_enable_apps = node[:erlang][:enable_apps]
 erlang_disable_apps = node[:erlang][:disable_apps]
+kerl_build_backend = node[:erlang][:kerl][:build_backend] || "tarball"
 
 directory "/usr/local/kerl" do
   mode  "0755"
@@ -21,7 +22,8 @@ template "/root/.kerlrc" do
     erlang_version: erlang_version,
     erlang_configure_options: erlang_configure_options,
     erlang_enable_apps: erlang_enable_apps,
-    erlang_disable_apps: erlang_disable_apps
+    erlang_disable_apps: erlang_disable_apps,
+    kerl_build_backend: kerl_build_backend
   )
 end
 
