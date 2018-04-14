@@ -35,7 +35,7 @@ end
 
 execute "kerl update releases"
 
-execute "kerl build #{erlang_version} #{erlang_version}" #do
+execute "kerl build #{erlang_version} #{erlang_version}" do
   not_if "test -e /usr/local/kerl/builds/#{erlang_version}"
 end
 
