@@ -25,15 +25,6 @@ template "/root/.kerlrc" do
   )
 end
 
-template "/etc/profile.d/kerl.sh" do
-  action :create
-  source "templates/kerl.sh.erb"
-  owner "root"
-  group "root"
-  mode "644"
-  variables(erlang_version: erlang_version)
-end
-
 # --- INSTALL ---
 
 execute "# get kerl" do
@@ -51,4 +42,15 @@ end
 execute "# activate erlang" do
   not_if "test -e /usr/local/kerl/erlang/#{erlang_version}"
   command "kerl install #{erlang_version} /usr/local/kerl/erlang/#{erlang_version}"
+end
+
+# profile
+
+template "/etc/profile.d/kerl.sh" do
+  action :create
+  source "templates/kerl.sh.erb"
+  owner "root"
+  group "root"
+  mode "644"
+  variables(erlang_version: erlang_version)
 end
