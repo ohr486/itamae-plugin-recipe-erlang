@@ -6,7 +6,7 @@ end
 
 describe file("/etc/profile.d/kerl.sh") do
   it { should be_file }
-  its(:content) { should match /20\.2/ }
+  its(:content) { should match /20\.3/ }
 end
 
 describe file("/usr/bin/kerl") do
