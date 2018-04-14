@@ -42,9 +42,9 @@ execute "# get kerl" do
   command "wget https://raw.githubusercontent.com/kerl/kerl/master/kerl; chmod a+x /usr/bin/kerl"
 end
 
-execute "kerl update releases"
+execute "KERL_BUILD_BACKEND=git kerl update releases"
 
-execute "kerl build #{erlang_version} #{erlang_version}" do
+execute "KERL_BUILD_BACKEND=git kerl build #{erlang_version} #{erlang_version}" do
   not_if "test -e /usr/local/kerl/builds/#{erlang_version}"
 end
 
