@@ -43,6 +43,8 @@ erlang:
   configure_options: ""
   enable_apps: ""
   disable_apps: ""
+  kerl:
+    build_backend: "tarball"
 ```
 
 ## Testing
