@@ -58,6 +58,7 @@ Gemfile.lock
 # for ide
 .idea
 *.impl
+.ideavimrc
 .vscode
 
 # for editor
